@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-default.css" />
+	<script src="http://github.hubspot.com/odometer/odometer.js"></script>
+	<style>
+		.odometer {
+    		font-size: 100px;
+    		position: absolute;
+   			top: 50%;
+    		left: 50%;
+    		margin-top: -100px;
+    		margin-left: -420px;
+    		
+		}
+	</style>
+</head>
+
+<body>
+	<div id="counter" class="odometer"></div>
+	
+	<script>
+	var timer;
+	var savingsPerMillisecond = 0.002061136478945;
+	var startMoment = (new Date(2016, 10, 1)).getTime(); // November as months are indexed from 0
+
+	var odometerElement = document.getElementById("counter");
+	updateOdometer();
+	timer = setInterval(updateOdometer, 2000);
+	
+	window.odometerOptions = {
+		duration: 500,
+		format: 
+	};
+
+	function updateOdometer() {
+		savings = Math.round((Date.now() - startMoment) * savingsPerMillisecond * 100) / 100 + 1900000;
+		odometerElement.innerHTML = savings;
+	}
+	</script>
+</body>
+
+</html>
