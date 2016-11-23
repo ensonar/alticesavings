@@ -1,8 +1,8 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css" />
-	<script src="https://github.hubspot.com/odometer/odometer.js"></script>
+	<link rel="stylesheet" href="https://hubspot.github.com/odometer/themes/odometer-theme-default.css" />
+	<script src="https://hubspot.github.com/odometer/odometer.js"></script>
 	<style>
 		.odometer {
     		font-size: 100px;
@@ -10,13 +10,14 @@
    			top: 50%;
     		left: 50%;
     		margin-top: -100px;
-    		margin-left: -420px;
+    		margin-left: -320px;
     		
 		}
 	</style>
 </head>
 
 <body>
+	<div style="position: absolute; top: 50%; left: 50%; margin-left: -370px; margin-top: -80px; font-size: 100px">$</div>
 	<div id="counter" class="odometer"></div>
 	
 	<script>
@@ -30,7 +31,7 @@
 	
 	window.odometerOptions = {
 		duration: 500,
-		format: 
+		format: '\$(,ddd).dd'
 	};
 
 	function updateOdometer() {
